@@ -1,0 +1,14 @@
+version: '2'
+services:
+    interface:
+        build: .
+        image: aasmetanin/telegrambot:Plantbot
+        # image: interface:moscow
+        ports:
+            - "8090:8090"
+        logging:
+            options:
+                max-size: "10m"
+                max-file: "3"
+        restart: unless-stopped
+        
